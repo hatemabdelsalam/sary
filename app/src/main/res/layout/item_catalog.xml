@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="showTitle"
+            type="Boolean" />
+
+        <variable
+            name="imageUrl"
+            type="String" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/catalogImg"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            imageUrl="@{imageUrl}"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:elevation="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:text="@{title}"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+<!--        android:visibility="@{showTitle? View.VISIBLE:View.GONE, default=gone}"-->
+
+    </LinearLayout>
+</layout>

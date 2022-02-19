@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.ui.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/bannerVp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <!--                <com.google.android.material.tabs.TabLayout-->
+            <!--                    android:id="@+id/ad_media_slider_tl"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginEnd="16dp"-->
+            <!--                    android:layout_marginBottom="4dp"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="@id/ads_banner_vp"-->
+            <!--                    app:tabBackground="@drawable/slider_dots_selector"-->
+            <!--                    app:tabIndicatorHeight="0dp"-->
+            <!--                    app:tabPaddingEnd="8dp"-->
+            <!--                    app:tabPaddingStart="8dp"-->
+            <!--                    app:tabRippleColor="@null" />-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/baseCatalogRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/bannerVp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
